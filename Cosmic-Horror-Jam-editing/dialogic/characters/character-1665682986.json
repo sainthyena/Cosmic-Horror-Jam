@@ -1,0 +1,21 @@
+{
+	"color": "#ff3b59ff",
+	"description": "",
+	"display_name": "Miles",
+	"display_name_bool": true,
+	"id": "character-1665682986.json",
+	"mirror_portraits": false,
+	"name": "NPC1",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Character_Portraits/MC.png"
+		}
+	],
+	"scale": 100,
+	"theme": ""
+}

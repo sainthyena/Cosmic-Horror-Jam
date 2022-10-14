@@ -1,0 +1,85 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"animation_wait": false,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This is the default dialog"
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "Angry",
+			"text": "this is part of it"
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[b]This is the starting text this is the This is the starting text this is the This is the starting text this is the This is the starting text this is the This is the starting text this is the [/b]"
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"animation_wait": false,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1665682986.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1665682986.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "this is also part of it"
+		},
+		{
+			"character": "character-1665682986.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "this is part of the dialog this is part of the dialog this is part of the dialog this is part of the dialog this is part of the dialog "
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1665652966.json",
+		"name": "first"
+	}
+}
