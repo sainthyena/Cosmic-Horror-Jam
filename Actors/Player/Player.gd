@@ -1,8 +1,9 @@
 extends KinematicBody2D
 class_name Player
 export var levelId: String
-export (int) var speed = 200
-onready var walk = $PlayerWalkSound/VolumeAdjust
+export (int) var speed = 1000
+onready var walk = $FootstepPlayer/VolumeControl
+onready var FootstepSound = $FootstepPlayer 
 #onready var pauseMenu = 'res://Scenes/Pause_Menu.tscn'
 #onready var pauseMenu = $Pause_Menu
 var show_pause = true
@@ -14,6 +15,7 @@ onready var animationState = animationTree.get("parameters/playback")
 var velocity = Vector2()
 
 func _ready():
+	
 	print ($Camera2D.zoom.x)
 	GlobalSettings.connect("zoom_changed", self, "on_zoom_changed")
 	
@@ -23,11 +25,11 @@ func showPauseMenu():
 #		get_tree().change_scene_to(load('res://Scenes/Pause_Menu.tscn'))
 	
 func play_audio():
-	if not walk.is_playing():
-			$PlayerWalkSound/VolumeAdjust.play("normal_volume")
+	if not walk.is_playing() and not FootstepSound.is_playing():
+			$FootstepPlayer.play()
 func stop_audio():
 	if walk.is_playing():
-		$PlayerWalkSound/VolumeAdjust.play("lower_volume")
+		walk.play("VolumeLower")
 	
 func get_input():
 	
@@ -36,15 +38,18 @@ func get_input():
 	velocity.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	velocity = velocity.normalized() * speed
 	
+	if Input.is_action_just_released("ui_right"):
+		stop_audio()
+	
 	if velocity != Vector2.ZERO:
 		animationTree.set("parameters/Idle/blend_position", velocity)
 		animationTree.set("parameters/Walk/blend_position", velocity)
 		animationState.travel("Walk")
-		walk.play("normal_volume")
+		play_audio()
 	else :
 		animationState.travel("Idle")
 		if walk.is_playing():
-			walk.play("lower_volume")
+			play_audio()
 		
 func _physics_process(delta):
 	get_input()

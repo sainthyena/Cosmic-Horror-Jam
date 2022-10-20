@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Actors/Player/Images/Walk_Sprite/sprite01.png" type="Texture" id=1]
 [ext_resource path="res://Images/Misc/lighting.png" type="Texture" id=2]
-[ext_resource path="res://Audio/SFX/footsteps.wav" type="AudioStream" id=3]
+[ext_resource path="res://Audio/SFX/Footsteps/footsteps.wav" type="AudioStream" id=3]
 [ext_resource path="res://Actors/Player/Player.gd" type="Script" id=4]
 [ext_resource path="res://UI/Exit_Text.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scripts/SAVE.gd" type="Script" id=6]

@@ -1,8 +1,24 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Main_Menu.gd" type="Script" id=1]
 [ext_resource path="res://interfaces/menu/FadePanel.tscn" type="PackedScene" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/MainMenu_Music_Player.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Fade_Out"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -80.0 ]
+}
 
 [node name="Main_Menu" type="Control"]
 anchor_right = 1.0
@@ -60,3 +76,16 @@ icon = ExtResource( 3 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="MainMenu_Music_Player" parent="." instance=ExtResource( 4 )]
+
+[node name="Audio_Controler" type="AnimationPlayer" parent="MainMenu_Music_Player"]
+root_node = NodePath("../AudioStreamPlayer")
+anims/Fade_Out = SubResource( 1 )
+
+[node name="Wait_Timer" type="Timer" parent="MainMenu_Music_Player"]
+one_shot = true
+
+[connection signal="timeout" from="MainMenu_Music_Player/Wait_Timer" to="." method="_on_Wait_Timer_timeout"]
+
+[editable path="MainMenu_Music_Player"]

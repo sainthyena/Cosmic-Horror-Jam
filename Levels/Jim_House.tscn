@@ -33,7 +33,6 @@ position = Vector2( 165, -68 )
 __meta__ = {
 "_edit_group_": true
 }
-speed = 800
 
 [node name="Save_Point" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 256, -7 )
@@ -49,11 +48,11 @@ position = Vector2( 58, -48.3452 )
 scale = Vector2( 1, 1.04365 )
 z_index = 3
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="YSort/StaticBody2D"]
-polygon = PoolVector2Array( 441, 50.1559, 436, 191.966, 391, 226.46, 1186, 240.833, 1153, 179.51, 1142, -139.563, 445, -131.897 )
-
 [node name="Polygon2D" type="Polygon2D" parent="YSort/StaticBody2D"]
 polygon = PoolVector2Array( 520, -235, 384, -129, 448, -123, 442, 193, 404, 229, 1166, 237, 1146, 191, 1140, -139, 1252, -151, 1146, -222.924 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="YSort/StaticBody2D"]
+polygon = PoolVector2Array( 441, 50.1559, 436, 191.966, 455, 191.008, 1107, 190.05, 1153, 179.51, 1146, -27.4563, 445, -23.6236 )
 
 [node name="Polygon2D2" type="Polygon2D" parent="."]
 position = Vector2( 58, -48.3452 )
@@ -107,7 +106,7 @@ __meta__ = {
 polygon = PoolVector2Array( -1207, -524, -1234, 1269, 2384, 1249, 2383, -549, -1177, -519, -1177, -566, 2451, -583, 2459, 1375, -1359, 1384, -1313, -587 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Level_Boundary"]
-polygon = PoolVector2Array( -707, 548, -223, 520, -199, 1264, 145, 1260, 137, 528, 1913, 524, 1925, 864, 1801, 1128, 1961, 1252, 1965, 1332, -975, 1336, -907, 1276, -703, 1096 )
+polygon = PoolVector2Array( -957, 539, -223, 520, -199, 1264, 145, 1260, 137, 528, 2095, 521, 2093, 829, 2101, 1145, 2098, 1256, 1965, 1332, -975, 1336, -941, 1273, -943, 1071 )
 
 [connection signal="area_entered" from="Entry_To_Town" to="Entry_To_Town" method="_on_Entry_To_Town_area_entered"]
 [connection signal="area_entered" from="Corn_Enter" to="Corn_Enter" method="_on_Corn_Enter_area_entered"]

@@ -24,8 +24,9 @@ __meta__ = {
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 802, 228 )
 
-[node name="AnimationTree" parent="YSort/Player" index="4"]
+[node name="AnimationTree" parent="YSort/Player" index="3"]
 parameters/playback = SubResource( 4 )
+parameters/Idle/blend_position = Vector2( -0.012685, 1.00862 )
 
 [node name="Save_Point" parent="YSort" instance=ExtResource( 4 )]
 position = Vector2( 534, 216 )
@@ -93,4 +94,5 @@ shape = SubResource( 3 )
 [connection signal="timeout" from="Corn_TeleporterBACK/Timer" to="Corn_TeleporterBACK" method="_on_Timer_timeout"]
 
 [editable path="YSort/Player"]
+[editable path="YSort/Player/Game_Music"]
 [editable path="YSort/Save_Point"]

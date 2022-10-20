@@ -1,12 +1,17 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://Actors/Player/Images/Walk_Sprite/sprite_001.png" type="Texture" id=1]
 [ext_resource path="res://Images/Lighting/lighting.png" type="Texture" id=2]
-[ext_resource path="res://Audio/SFX/footsteps.wav" type="AudioStream" id=3]
+[ext_resource path="res://Audio/Game_Music.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Actors/Player/Player.gd" type="Script" id=4]
 [ext_resource path="res://UI/Exit_Text.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Actors/Player/Images/Walk_Sprite/Main_Character-Sheet.png" type="Texture" id=6]
 [ext_resource path="res://Actors/Player/PlayerCamera.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Audio/SFX/Footsteps/Footstep_Grass_Generic_Shoe_v5_wav.wav" type="AudioStream" id=8]
+[ext_resource path="res://Audio/SFX/Footsteps/Footstep_Grass_Generic_Shoe_v6_wav.wav" type="AudioStream" id=9]
+[ext_resource path="res://Audio/SFX/Footsteps/Footstep_Grass_Generic_Shoe_v2_wav.wav" type="AudioStream" id=10]
+[ext_resource path="res://Audio/SFX/Footsteps/Footstep_Grass_Generic_Shoe_v4_wav.wav" type="AudioStream" id=12]
+[ext_resource path="res://addons/randomAudioStreamPlayer/random_audio_stream_player.gd" type="Script" id=13]
 
 [sub_resource type="Animation" id=37]
 resource_name = "Idle_Back"
@@ -264,36 +269,26 @@ height = 10.0
 [sub_resource type="CircleShape2D" id=3]
 radius = 48.5077
 
-[sub_resource type="Animation" id=53]
-resource_name = "New Anim"
-length = 4.0
+[sub_resource type="Animation" id=71]
+resource_name = "Idle"
+
+[sub_resource type="Animation" id=72]
+resource_name = "Play_Footsteps"
 tracks/0/type = "value"
-tracks/0/path = NodePath(".:volume_db")
+tracks/0/path = NodePath(".:playing")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:playing")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=4]
-length = 0.001
+[sub_resource type="Animation" id=73]
+resource_name = "VolumeLower"
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:volume_db")
 tracks/0/interp = 1
@@ -301,82 +296,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-
-[sub_resource type="Animation" id=5]
-resource_name = "lower_volume"
-length = 1.5
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:volume_db")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1.5 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 0.0, -80.0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:playing")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 1.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, false ]
-}
-
-[sub_resource type="Animation" id=25]
-resource_name = "mute"
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:volume_db")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ -80.0 ]
-}
-
-[sub_resource type="Animation" id=6]
-resource_name = "normal_volume"
-length = 4.0
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:volume_db")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ -20.0, 0.0, 0.0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:playing")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
 }
 
 [node name="Player" type="KinematicBody2D"]
@@ -392,6 +315,7 @@ zoom = Vector2( 1, 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../AnimatedSprite")
+autoplay = "Idle_Front"
 anims/Idle_Back = SubResource( 37 )
 anims/Idle_Front = SubResource( 38 )
 anims/Idle_Left = SubResource( 39 )
@@ -410,7 +334,7 @@ parameters/Walk/blend_position = Vector2( -0.00557619, -0.991379 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -29 )
 frames = SubResource( 36 )
-animation = "Idle_Left"
+animation = "Idle_Front"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -427,16 +351,6 @@ shape = SubResource( 3 )
 __meta__ = {
 "_edit_lock_": true
 }
-
-[node name="PlayerWalkSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
-
-[node name="VolumeAdjust" type="AnimationPlayer" parent="PlayerWalkSound"]
-"anims/New Anim" = SubResource( 53 )
-anims/RESET = SubResource( 4 )
-anims/lower_volume = SubResource( 5 )
-anims/mute = SubResource( 25 )
-anims/normal_volume = SubResource( 6 )
 
 [node name="Light2D" type="Light2D" parent="."]
 texture = ExtResource( 2 )
@@ -467,3 +381,20 @@ __meta__ = {
 [node name="Exit_Text" parent="Exit/Control" instance=ExtResource( 5 )]
 position = Vector2( 666, 439.13 )
 scale = Vector2( 1, 1.08696 )
+
+[node name="FootstepPlayer" type="AudioStreamPlayer" parent="."]
+pitch_scale = 0.8
+script = ExtResource( 13 )
+samples = [ ExtResource( 12 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 8 ) ]
+random_strategy = 2
+random_volume_range = 1.0
+random_pitch_range = 0
+
+[node name="VolumeControl" type="AnimationPlayer" parent="FootstepPlayer"]
+anims/Idle = SubResource( 71 )
+anims/Play_Footsteps = SubResource( 72 )
+anims/VolumeLower = SubResource( 73 )
+
+[node name="Game_Music" parent="." instance=ExtResource( 3 )]
+
+[editable path="Game_Music"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Audio/SFX/Footsteps/Footstep_Leafs_Generic_Shoe_v24_wav.wav" type="AudioStream" id=1]
+[ext_resource path="res://Audio/SFX/Footsteps/Footstep_Leafs_Generic_Shoe_v25_wav.wav" type="AudioStream" id=2]
+[ext_resource path="res://Audio/SFX/Footsteps/Footstep_Leafs_Generic_Shoe_v22_wav.wav" type="AudioStream" id=3]
+[ext_resource path="res://Audio/SFX/Footsteps/Footstep_Leafs_Generic_Shoe_v23_wav.wav" type="AudioStream" id=4]
+[ext_resource path="res://Audio/SFX/Footsteps/Footstep_Leafs_Generic_Shoe_v20_wav.wav" type="AudioStream" id=5]
+[ext_resource path="res://Audio/SFX/Footsteps/Footstep_Leafs_Generic_Shoe_v21_wav.wav" type="AudioStream" id=6]
+[ext_resource path="res://addons/randomAudioStreamPlayer/random_audio_stream_player_2D.gd" type="Script" id=7]
+
+[node name="AudioRandomizer" type="Node2D"]
+
+[node name="FootstepRandomizer" type="AudioStreamPlayer2D" parent="."]
+script = ExtResource( 7 )
+samples = [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 2 ) ]
+random_volume_range = 0
+random_pitch_range = 0

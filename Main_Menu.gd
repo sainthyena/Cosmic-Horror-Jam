@@ -5,6 +5,7 @@ onready var FadePanel = $MainMenu/FadePanel
 var continueOnLevel: String
 
 func _ready() -> void:
+	$MainMenu_Music_Player/AudioStreamPlayer.play()
 	$MainMenu/SideMenu/NewGameButton.connect('pressed', self, '_onNewPressed')
 	$MainMenu/SideMenu/ContinueButton.connect('pressed', self, '_onContinuePressed')
 #	$SideMenu/TestLevelButton4.connect('pressed', self, '_onTestLevelPressed', ["ExitLevel"])
@@ -22,11 +23,7 @@ func _ready() -> void:
 	
 	actionAfterFade = "enableMenu"
 	FadePanel.fadeIn()
-
-
-
-
-# disables the cursor and begins fade out to load next level
+	
 func _onNewPressed() -> void:
 	actionAfterFade = "startNew"
 	FadePanel.fadeOut()
@@ -52,9 +49,12 @@ func _onQuitPressed() -> void:
 # Enables input after the initial fade in and loads the next scene after fade out
 func _fadeComplete() -> void: 
 	if (actionAfterFade == "startNew"):
-		LevelManager.start_level("Test_Corn")
+		$MainMenu_Music_Player/Audio_Controler.play("Fade_Out")
+		$MainMenu_Music_Player/Wait_Timer.start()
+		
+		
 	elif (actionAfterFade == "continue"):
-		LevelManager.start_level(continueOnLevel)
+		$MainMenu_Music_Player/Wait_Timer.start()
 	elif (actionAfterFade == "enableMenu"):
 		FadePanel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -67,7 +67,7 @@ func _on_save_loaded():
 	if(continueOnLevel != null && continueOnLevel != ""):
 		$MainMenu/SideMenu/ContinueButton.disabled = false
 
-#
+
 #func _pick_random_title_image():
 #	$MenuArt1.visible = false
 #	$MenuArt2.visible = false
@@ -77,3 +77,15 @@ func _on_save_loaded():
 #		$MenuArt1.visible = true
 #	elif(pick == 1):
 #		$MenuArt2.visible = true
+
+
+func _on_Wait_Timer_timeout():
+	if (actionAfterFade == "startNew"):
+		GlobalTimer.start()
+		GameMusic.play()
+		LevelManager.start_level("Test_Corn")
+
+	elif (actionAfterFade == "continue"):
+		GameMusic.play()
+		LevelManager.start_level(continueOnLevel)
+	
