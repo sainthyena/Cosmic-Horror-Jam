@@ -1,0 +1,113 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Actors/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Actors/Save_Point.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Levels/Entry_To_Town.gd" type="Script" id=3]
+[ext_resource path="res://Levels/Jim_House.gd" type="Script" id=4]
+[ext_resource path="res://Levels/Corn_Enter.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 205, 10 )
+
+[sub_resource type="SegmentShape2D" id=3]
+a = Vector2( 1611, -7 )
+b = Vector2( -1461, 13 )
+
+[sub_resource type="SegmentShape2D" id=4]
+a = Vector2( 5, 1271 )
+b = Vector2( -2, -334 )
+
+[node name="Jim_House" type="Node2D"]
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="YSort" type="YSort" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 165, -68 )
+__meta__ = {
+"_edit_group_": true
+}
+speed = 800
+
+[node name="Save_Point" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 256, -7 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 193.0, 182.0, -36.0, -36.0, -60.0, -49.0 ],
+"_edit_lock_": true,
+"_edit_vertical_guides_": [ 513.0, 510.0, -32.0, -39.0 ]
+}
+levelId = "Jim_House"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="YSort"]
+position = Vector2( 58, -48.3452 )
+scale = Vector2( 1, 1.04365 )
+z_index = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="YSort/StaticBody2D"]
+polygon = PoolVector2Array( 441, 50.1559, 436, 191.966, 391, 226.46, 1186, 240.833, 1153, 179.51, 1142, -139.563, 445, -131.897 )
+
+[node name="Polygon2D" type="Polygon2D" parent="YSort/StaticBody2D"]
+polygon = PoolVector2Array( 520, -235, 384, -129, 448, -123, 442, 193, 404, 229, 1166, 237, 1146, 191, 1140, -139, 1252, -151, 1146, -222.924 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+position = Vector2( 58, -48.3452 )
+scale = Vector2( 1, 1.04365 )
+color = Color( 0.34902, 0.376471, 0.521569, 1 )
+polygon = PoolVector2Array( -444, -172.141, 1603, -178.848, 1866, -26.4981, 1870, 871.312, 1733, 1136.73, 1977, 1301.53, 2485, 1307.28, 2454, -474.924, -686, -463.426, -1451, -459.593, -1476, 1283.33, -1038, 1301.53, -759, 1097.44, -759, 565.654, -724, -10.2091 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( 8, -48 )
+scale = Vector2( 1, 1.04365 )
+color = Color( 0.337255, 0.952941, 0.494118, 1 )
+polygon = PoolVector2Array( -211, 268.289, -707, 268.289, -707, 567.24, -227, 544.243, -219, 1257.13, 137, 1257.13, 129, 548.076, 1941, 551.909, 1937, 237.627, 77, 249.125, 89, -482.92, -239, -482.92 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Entry_To_Town" type="Area2D" parent="."]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Entry_To_Town"]
+position = Vector2( -23, 1228 )
+shape = SubResource( 2 )
+
+[node name="Corn_Enter" type="Area2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Corn_Enter"]
+position = Vector2( 457, -334 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Corn_Enter"]
+position = Vector2( -965, -3 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Corn_Enter"]
+position = Vector2( 2108, -6 )
+shape = SubResource( 4 )
+
+[node name="Level_Boundary" type="StaticBody2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Level_Boundary"]
+polygon = PoolVector2Array( -1207, -524, -1234, 1269, 2384, 1249, 2383, -549, -1177, -519, -1177, -566, 2451, -583, 2459, 1375, -1359, 1384, -1313, -587 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Level_Boundary"]
+polygon = PoolVector2Array( -707, 548, -223, 520, -199, 1264, 145, 1260, 137, 528, 1913, 524, 1925, 864, 1801, 1128, 1961, 1252, 1965, 1332, -975, 1336, -907, 1276, -703, 1096 )
+
+[connection signal="area_entered" from="Entry_To_Town" to="Entry_To_Town" method="_on_Entry_To_Town_area_entered"]
+[connection signal="area_entered" from="Corn_Enter" to="Corn_Enter" method="_on_Corn_Enter_area_entered"]

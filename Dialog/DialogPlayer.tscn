@@ -3,6 +3,7 @@
 [ext_resource path="res://Dialog/DialogPlayer.gd" type="Script" id=2]
 
 [node name="DialogPlayer" type="CanvasLayer"]
+layer = 99
 visible = false
 script = ExtResource( 2 )
 timeline = "timeline-1665653016.json"
