@@ -1,0 +1,21 @@
+{
+	"color": "#ff2a3368",
+	"description": "",
+	"display_name": "Jim",
+	"display_name_bool": true,
+	"id": "character-1666481843.json",
+	"mirror_portraits": false,
+	"name": "Jim",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Actors/NPC/Jim/talksprite.png"
+		}
+	],
+	"scale": 100,
+	"theme": "theme-1666482410.cfg"
+}

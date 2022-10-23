@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Dialog/DialogPlayer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Audio/SFX/car stoped.wav" type="AudioStream" id=2]
+[ext_resource path="res://Levels/IntroCutscene.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="EngineSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="DialogPlayer" parent="." instance=ExtResource( 1 )]
+timeline = "timeline-1666483454.json"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 8.4
+one_shot = true
+autostart = true
+
+[connection signal="finished" from="EngineSFX" to="." method="_on_AudioStreamPlayer_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

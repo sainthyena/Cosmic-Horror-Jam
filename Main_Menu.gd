@@ -82,7 +82,6 @@ func _on_save_loaded():
 func _on_Wait_Timer_timeout():
 	if (actionAfterFade == "startNew"):
 		GlobalTimer.start()
-		GameMusic.play()
 		LevelManager.start_level("Test_Corn")
 
 	elif (actionAfterFade == "continue"):

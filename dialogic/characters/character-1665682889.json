@@ -13,13 +13,9 @@
 	"portraits": [
 		{
 			"name": "Default",
-			"path": "res://Character_Portraits/MC.png"
-		},
-		{
-			"name": "Angry",
-			"path": "res://Character_Portraits/MC_angry.png"
+			"path": "res://Actors/Player/Images/Talksprite/MC.png"
 		}
 	],
 	"scale": 100,
-	"theme": ""
+	"theme": "default-theme.cfg"
 }

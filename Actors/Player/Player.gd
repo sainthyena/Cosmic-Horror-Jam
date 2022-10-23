@@ -16,7 +16,6 @@ var velocity = Vector2()
 
 func _ready():
 	
-	print ($Camera2D.zoom.x)
 	GlobalSettings.connect("zoom_changed", self, "on_zoom_changed")
 	
 func showPauseMenu():
@@ -62,22 +61,4 @@ func _on_Save_Area_area_entered(area):
 	
 	UserDataManager.set_data("save-file", { level = levelId })
 	UserDataManager.save_data()
-	print ("saved game")
-	pass # Replace with function body.
 
-
-func _on_Jim_House_ShowPauseMenu():
-	pass
-#	show_pause = true
-#	showPauseMenu()
-
-
-func _on_Test_Corn_RemovePauseMenu():
-	pass
-#	show_pause = false
-#	showPauseMenu()
-
-func on_zoom_changed():
-	
-	$Camera2D.zoom.x = 2
-	$Camera2D.zoom.y = 2

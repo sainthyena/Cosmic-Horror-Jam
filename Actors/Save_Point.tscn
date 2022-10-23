@@ -279,10 +279,6 @@ position = Vector2( 12, -7 )
 frames = SubResource( 13 )
 animation = "Idle"
 playing = true
-__meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -1, 35 )

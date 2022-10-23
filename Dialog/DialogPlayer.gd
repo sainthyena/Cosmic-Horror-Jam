@@ -6,6 +6,7 @@ var dialog = {}
 
 
 func _ready():
+#	SignalBus.connect("Jim_Entry", self, "on_display_Entry")
 	SignalBus.connect("display_dialog", self, "on_display_dialog")
 
 
@@ -13,7 +14,8 @@ func unpause(_unused_argument):
 	print ("unpaused")
 	get_tree().paused = false
 	finished = true
-
+	
+	
 func on_display_dialog():
 	if not get_tree().paused:
 		get_tree().paused = true

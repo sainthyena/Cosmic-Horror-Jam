@@ -1,0 +1,45 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1666481843.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1666481843.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You better go talk to Henry. Your mom'll be with him."
+		},
+		{
+			"character": "character-1666481843.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "He's usually at the church. Right on ahead, can't miss it."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1666482307.json",
+		"name": "Jim_House"
+	}
+}

@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Images/TileSets/Sprite-0009.png" type="Texture" id=1]
+[ext_resource path="res://Images/TileSets/example.png" type="Texture" id=2]
+[ext_resource path="res://Images/TileSets/test1.png" type="Texture" id=3]
+
+[sub_resource type="TileSet" id=1]
+0/name = "Sprite-0009.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 256, 256 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 0
+0/autotile/bitmask_flags = [ Vector2( 0, 0 ), 4522240, Vector2( 0, 1 ), 4260100, Vector2( 0, 2 ), 4260100, Vector2( 0, 3 ), 4260100, Vector2( 0, 4 ), 4260100, Vector2( 0, 5 ), 21037060, Vector2( 0, 6 ), 4522240, Vector2( 0, 7 ), 21037060, Vector2( 1, 0 ), 17104960, Vector2( 1, 1 ), 17039425, Vector2( 1, 2 ), 17039425, Vector2( 1, 3 ), 17039425, Vector2( 1, 4 ), 17039425, Vector2( 1, 5 ), 21233665, Vector2( 1, 6 ), 17104960, Vector2( 1, 7 ), 21233665, Vector2( 2, 0 ), 4522240, Vector2( 2, 1 ), 4260100, Vector2( 2, 2 ), 4260100, Vector2( 2, 3 ), 4260100, Vector2( 2, 4 ), 4260100, Vector2( 2, 5 ), 21037060, Vector2( 2, 6 ), 4522240, Vector2( 2, 7 ), 21037060, Vector2( 3, 0 ), 328000, Vector2( 3, 1 ), 16777285, Vector2( 3, 2 ), 262465, Vector2( 3, 3 ), 16777285, Vector2( 3, 4 ), 262465, Vector2( 3, 5 ), 20971525, Vector2( 3, 6 ), 328000, Vector2( 3, 7 ), 20971525, Vector2( 4, 0 ), 328000, Vector2( 4, 1 ), 4194565, Vector2( 4, 2 ), 65860, Vector2( 4, 3 ), 4194565, Vector2( 4, 4 ), 65860, Vector2( 4, 5 ), 20971525, Vector2( 4, 6 ), 328000, Vector2( 4, 7 ), 20971525, Vector2( 5, 0 ), 328000, Vector2( 5, 1 ), 16777285, Vector2( 5, 2 ), 262465, Vector2( 5, 3 ), 16777285, Vector2( 5, 4 ), 262465, Vector2( 5, 5 ), 20971525, Vector2( 5, 6 ), 328000, Vector2( 5, 7 ), 20971525, Vector2( 6, 0 ), 328000, Vector2( 6, 1 ), 4194565, Vector2( 6, 2 ), 65860, Vector2( 6, 3 ), 4194565, Vector2( 6, 4 ), 65860, Vector2( 6, 5 ), 20971525, Vector2( 6, 6 ), 328000, Vector2( 6, 7 ), 20971525, Vector2( 7, 0 ), 17104960, Vector2( 7, 1 ), 17039425, Vector2( 7, 2 ), 17039425, Vector2( 7, 3 ), 17039425, Vector2( 7, 4 ), 17039425, Vector2( 7, 5 ), 21233665, Vector2( 7, 6 ), 17104960, Vector2( 7, 7 ), 21233665 ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 32, 32 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "example.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 768, 256 )
+1/tile_mode = 1
+1/autotile/bitmask_mode = 0
+1/autotile/bitmask_flags = [ Vector2( 0, 0 ), 256, Vector2( 0, 1 ), 260, Vector2( 0, 2 ), 260, Vector2( 0, 3 ), 260, Vector2( 0, 4 ), 260, Vector2( 0, 5 ), 4, Vector2( 0, 6 ), 256, Vector2( 0, 7 ), 4, Vector2( 1, 0 ), 64, Vector2( 1, 1 ), 65, Vector2( 1, 2 ), 65, Vector2( 1, 3 ), 65, Vector2( 1, 4 ), 65, Vector2( 1, 5 ), 1, Vector2( 1, 6 ), 64, Vector2( 1, 7 ), 1, Vector2( 2, 0 ), 256, Vector2( 2, 1 ), 260, Vector2( 2, 2 ), 260, Vector2( 2, 3 ), 260, Vector2( 2, 4 ), 260, Vector2( 2, 5 ), 4, Vector2( 2, 6 ), 256, Vector2( 2, 7 ), 4, Vector2( 3, 0 ), 320, Vector2( 3, 1 ), 69, Vector2( 3, 2 ), 321, Vector2( 3, 3 ), 69, Vector2( 3, 4 ), 321, Vector2( 3, 5 ), 5, Vector2( 3, 6 ), 320, Vector2( 3, 7 ), 5, Vector2( 4, 0 ), 320, Vector2( 4, 1 ), 261, Vector2( 4, 2 ), 324, Vector2( 4, 3 ), 261, Vector2( 4, 4 ), 324, Vector2( 4, 5 ), 5, Vector2( 4, 6 ), 320, Vector2( 4, 7 ), 5, Vector2( 5, 0 ), 320, Vector2( 5, 1 ), 69, Vector2( 5, 2 ), 321, Vector2( 5, 3 ), 69, Vector2( 5, 4 ), 321, Vector2( 5, 5 ), 5, Vector2( 5, 6 ), 320, Vector2( 5, 7 ), 5, Vector2( 6, 0 ), 320, Vector2( 6, 1 ), 261, Vector2( 6, 2 ), 324, Vector2( 6, 3 ), 261, Vector2( 6, 4 ), 324, Vector2( 6, 5 ), 5, Vector2( 6, 6 ), 320, Vector2( 6, 7 ), 5, Vector2( 7, 0 ), 64, Vector2( 7, 1 ), 65, Vector2( 7, 2 ), 65, Vector2( 7, 3 ), 65, Vector2( 7, 4 ), 65, Vector2( 7, 5 ), 1, Vector2( 7, 6 ), 64, Vector2( 7, 7 ), 1, Vector2( 8, 0 ), 325, Vector2( 8, 1 ), 261, Vector2( 8, 2 ), 260, Vector2( 8, 3 ), 260, Vector2( 8, 4 ), 260, Vector2( 8, 5 ), 260, Vector2( 8, 6 ), 324, Vector2( 8, 7 ), 325, Vector2( 9, 0 ), 321, Vector2( 9, 1 ), 69, Vector2( 9, 2 ), 321, Vector2( 9, 3 ), 325, Vector2( 9, 4 ), 325, Vector2( 9, 5 ), 69, Vector2( 9, 6 ), 321, Vector2( 9, 7 ), 69, Vector2( 10, 0 ), 320, Vector2( 10, 1 ), 261, Vector2( 10, 2 ), 324, Vector2( 10, 3 ), 325, Vector2( 10, 4 ), 325, Vector2( 10, 5 ), 261, Vector2( 10, 6 ), 324, Vector2( 10, 7 ), 5, Vector2( 11, 0 ), 320, Vector2( 11, 1 ), 325, Vector2( 11, 2 ), 325, Vector2( 11, 3 ), 325, Vector2( 11, 4 ), 325, Vector2( 11, 5 ), 325, Vector2( 11, 6 ), 325, Vector2( 11, 7 ), 5, Vector2( 12, 0 ), 320, Vector2( 12, 1 ), 325, Vector2( 12, 2 ), 325, Vector2( 12, 3 ), 325, Vector2( 12, 4 ), 325, Vector2( 12, 5 ), 325, Vector2( 12, 6 ), 325, Vector2( 12, 7 ), 5, Vector2( 13, 0 ), 320, Vector2( 13, 1 ), 69, Vector2( 13, 2 ), 321, Vector2( 13, 3 ), 325, Vector2( 13, 4 ), 325, Vector2( 13, 5 ), 69, Vector2( 13, 6 ), 321, Vector2( 13, 7 ), 5, Vector2( 14, 0 ), 324, Vector2( 14, 1 ), 261, Vector2( 14, 2 ), 324, Vector2( 14, 3 ), 325, Vector2( 14, 4 ), 325, Vector2( 14, 5 ), 261, Vector2( 14, 6 ), 324, Vector2( 14, 7 ), 261, Vector2( 15, 0 ), 325, Vector2( 15, 1 ), 69, Vector2( 15, 2 ), 65, Vector2( 15, 3 ), 65, Vector2( 15, 4 ), 65, Vector2( 15, 5 ), 65, Vector2( 15, 6 ), 321, Vector2( 15, 7 ), 325, Vector2( 16, 0 ), 256, Vector2( 16, 1 ), 260, Vector2( 16, 2 ), 260, Vector2( 16, 3 ), 260, Vector2( 16, 4 ), 324, Vector2( 16, 5 ), 261, Vector2( 16, 6 ), 260, Vector2( 16, 7 ), 4, Vector2( 17, 0 ), 320, Vector2( 17, 1 ), 325, Vector2( 17, 2 ), 325, Vector2( 17, 3 ), 325, Vector2( 17, 4 ), 325, Vector2( 17, 5 ), 325, Vector2( 17, 6 ), 325, Vector2( 17, 7 ), 5, Vector2( 18, 0 ), 324, Vector2( 18, 1 ), 325, Vector2( 18, 2 ), 324, Vector2( 18, 3 ), 325, Vector2( 18, 4 ), 325, Vector2( 18, 5 ), 325, Vector2( 18, 6 ), 325, Vector2( 18, 7 ), 5, Vector2( 19, 0 ), 321, Vector2( 19, 1 ), 325, Vector2( 19, 2 ), 325, Vector2( 19, 3 ), 69, Vector2( 19, 4 ), 325, Vector2( 19, 5 ), 325, Vector2( 19, 6 ), 325, Vector2( 19, 7 ), 5, Vector2( 20, 0 ), 320, Vector2( 20, 1 ), 325, Vector2( 20, 4 ), 325, Vector2( 20, 5 ), 261, Vector2( 20, 6 ), 325, Vector2( 20, 7 ), 261, Vector2( 21, 0 ), 320, Vector2( 21, 1 ), 325, Vector2( 21, 4 ), 321, Vector2( 21, 5 ), 325, Vector2( 21, 6 ), 325, Vector2( 21, 7 ), 69, Vector2( 22, 0 ), 320, Vector2( 22, 1 ), 325, Vector2( 22, 2 ), 325, Vector2( 22, 3 ), 325, Vector2( 22, 4 ), 325, Vector2( 22, 5 ), 325, Vector2( 22, 6 ), 325, Vector2( 22, 7 ), 5, Vector2( 23, 0 ), 64, Vector2( 23, 1 ), 65, Vector2( 23, 2 ), 321, Vector2( 23, 3 ), 69, Vector2( 23, 4 ), 65, Vector2( 23, 5 ), 65, Vector2( 23, 6 ), 65, Vector2( 23, 7 ), 1 ]
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 32, 32 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "test1.png 2"
+2/texture = ExtResource( 3 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 256, 256 )
+2/tile_mode = 1
+2/autotile/bitmask_mode = 0
+2/autotile/bitmask_flags = [ Vector2( 0, 0 ), 4522240, Vector2( 0, 1 ), 4260100, Vector2( 0, 2 ), 4260100, Vector2( 0, 3 ), 4260100, Vector2( 0, 4 ), 4260100, Vector2( 0, 5 ), 21037060, Vector2( 0, 6 ), 4522240, Vector2( 0, 7 ), 21037060, Vector2( 1, 0 ), 17104960, Vector2( 1, 1 ), 17039425, Vector2( 1, 2 ), 17039425, Vector2( 1, 3 ), 17039425, Vector2( 1, 4 ), 17039425, Vector2( 1, 5 ), 21233665, Vector2( 1, 6 ), 17104960, Vector2( 1, 7 ), 21233665, Vector2( 2, 0 ), 4522240, Vector2( 2, 1 ), 4260100, Vector2( 2, 2 ), 4260100, Vector2( 2, 3 ), 4260100, Vector2( 2, 4 ), 4260100, Vector2( 2, 5 ), 21037060, Vector2( 2, 6 ), 4522240, Vector2( 2, 7 ), 21037060, Vector2( 3, 0 ), 328000, Vector2( 3, 1 ), 16777285, Vector2( 3, 2 ), 262465, Vector2( 3, 3 ), 16777285, Vector2( 3, 4 ), 262465, Vector2( 3, 5 ), 20971525, Vector2( 3, 6 ), 328000, Vector2( 3, 7 ), 20971525, Vector2( 4, 0 ), 328000, Vector2( 4, 1 ), 4194565, Vector2( 4, 2 ), 65860, Vector2( 4, 3 ), 4194565, Vector2( 4, 4 ), 65860, Vector2( 4, 5 ), 20971525, Vector2( 4, 6 ), 328000, Vector2( 4, 7 ), 20971525, Vector2( 5, 0 ), 328000, Vector2( 5, 1 ), 16777285, Vector2( 5, 2 ), 262465, Vector2( 5, 3 ), 16777285, Vector2( 5, 4 ), 262465, Vector2( 5, 5 ), 20971525, Vector2( 5, 6 ), 328000, Vector2( 5, 7 ), 20971525, Vector2( 6, 0 ), 328000, Vector2( 6, 1 ), 4194565, Vector2( 6, 2 ), 65860, Vector2( 6, 3 ), 4194565, Vector2( 6, 4 ), 65860, Vector2( 6, 5 ), 20971525, Vector2( 6, 6 ), 328000, Vector2( 6, 7 ), 20971525, Vector2( 7, 0 ), 17104960, Vector2( 7, 1 ), 17039425, Vector2( 7, 2 ), 17039425, Vector2( 7, 3 ), 17039425, Vector2( 7, 4 ), 17039425, Vector2( 7, 5 ), 21233665, Vector2( 7, 6 ), 17104960, Vector2( 7, 7 ), 21233665 ]
+2/autotile/icon_coordinate = Vector2( 0, 0 )
+2/autotile/tile_size = Vector2( 32, 32 )
+2/autotile/spacing = 0
+2/autotile/occluder_map = [  ]
+2/autotile/navpoly_map = [  ]
+2/autotile/priority_map = [  ]
+2/autotile/z_index_map = [  ]
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+
+[node name="Road_Path" type="TileMap"]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+format = 1

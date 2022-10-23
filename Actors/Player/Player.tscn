@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://Actors/Player/Images/Walk_Sprite/sprite_001.png" type="Texture" id=1]
 [ext_resource path="res://Images/Lighting/lighting.png" type="Texture" id=2]
@@ -10,8 +10,10 @@
 [ext_resource path="res://Audio/SFX/Footsteps/Footstep_Grass_Generic_Shoe_v5_wav.wav" type="AudioStream" id=8]
 [ext_resource path="res://Audio/SFX/Footsteps/Footstep_Grass_Generic_Shoe_v6_wav.wav" type="AudioStream" id=9]
 [ext_resource path="res://Audio/SFX/Footsteps/Footstep_Grass_Generic_Shoe_v2_wav.wav" type="AudioStream" id=10]
+[ext_resource path="res://Actors/Player/Images/Walk_Sprite/Main_Character_left.png" type="Texture" id=11]
 [ext_resource path="res://Audio/SFX/Footsteps/Footstep_Grass_Generic_Shoe_v4_wav.wav" type="AudioStream" id=12]
 [ext_resource path="res://addons/randomAudioStreamPlayer/random_audio_stream_player.gd" type="Script" id=13]
+[ext_resource path="res://Actors/Player/Images/Walk_Sprite/Idle_left.png" type="Texture" id=14]
 
 [sub_resource type="Animation" id=37]
 resource_name = "Idle_Back"
@@ -105,6 +107,21 @@ tracks/0/keys = {
 "values": [ "Walk_Front" ]
 }
 
+[sub_resource type="Animation" id=74]
+resource_name = "Walk_Left"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Walk_Left" ]
+}
+
 [sub_resource type="AnimationNodeAnimation" id=43]
 animation = "Idle_Left"
 
@@ -135,7 +152,7 @@ animation = "Walk_Back"
 animation = "Walk_Front"
 
 [sub_resource type="AnimationNodeAnimation" id=67]
-animation = "Idle_Left"
+animation = "Walk_Left"
 
 [sub_resource type="AnimationNodeAnimation" id=68]
 animation = "Idle_Right"
@@ -174,9 +191,10 @@ region = Rect2( 48, 0, 48, 120 )
 atlas = ExtResource( 1 )
 region = Rect2( 0, 0, 48, 120 )
 
-[sub_resource type="AtlasTexture" id=28]
-atlas = ExtResource( 1 )
-region = Rect2( 96, 0, 48, 120 )
+[sub_resource type="AtlasTexture" id=81]
+flags = 4
+atlas = ExtResource( 14 )
+region = Rect2( 0, 0, 41, 115 )
 
 [sub_resource type="AtlasTexture" id=29]
 atlas = ExtResource( 1 )
@@ -230,6 +248,30 @@ region = Rect2( 768, 0, 48, 120 )
 atlas = ExtResource( 6 )
 region = Rect2( 960, 0, 48, 120 )
 
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 46, 116 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 11 )
+region = Rect2( 46, 0, 46, 116 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 11 )
+region = Rect2( 92, 0, 46, 116 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 11 )
+region = Rect2( 138, 0, 46, 116 )
+
+[sub_resource type="AtlasTexture" id=79]
+atlas = ExtResource( 11 )
+region = Rect2( 184, 0, 46, 116 )
+
+[sub_resource type="AtlasTexture" id=80]
+atlas = ExtResource( 11 )
+region = Rect2( 230, 0, 46, 116 )
+
 [sub_resource type="SpriteFrames" id=36]
 animations = [ {
 "frames": [ SubResource( 26 ) ],
@@ -242,7 +284,7 @@ animations = [ {
 "name": "Idle_Front",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 28 ) ],
+"frames": [ SubResource( 81 ) ],
 "loop": true,
 "name": "Idle_Left",
 "speed": 5.0
@@ -261,13 +303,18 @@ animations = [ {
 "loop": true,
 "name": "Walk_Front",
 "speed": 8.0
+}, {
+"frames": [ SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ) ],
+"loop": true,
+"name": "Walk_Left",
+"speed": 8.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=70]
 height = 10.0
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 48.5077
+radius = 63.7887
 
 [sub_resource type="Animation" id=71]
 resource_name = "Idle"
@@ -322,6 +369,7 @@ anims/Idle_Left = SubResource( 39 )
 anims/Idle_Right = SubResource( 40 )
 anims/Walk_Back = SubResource( 69 )
 anims/Walk_Front = SubResource( 41 )
+anims/Walk_Left = SubResource( 74 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 42 )
@@ -329,12 +377,12 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 50 )
 parameters/Idle/blend_position = Vector2( 0, 0 )
-parameters/Walk/blend_position = Vector2( -0.00557619, -0.991379 )
+parameters/Walk/blend_position = Vector2( -0.012685, 1.02586 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -29 )
 frames = SubResource( 36 )
-animation = "Idle_Front"
+animation = "Idle_Left"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -342,15 +390,10 @@ position = Vector2( 0, 15 )
 shape = SubResource( 70 )
 
 [node name="Area2D" type="Area2D" parent="."]
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -1, -26 )
 shape = SubResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Light2D" type="Light2D" parent="."]
 texture = ExtResource( 2 )

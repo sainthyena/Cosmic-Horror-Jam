@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Main_Menu.gd" type="Script" id=1]
 [ext_resource path="res://interfaces/menu/FadePanel.tscn" type="PackedScene" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/MainMenu_Music_Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Images/UI/newgrame.png" type="Texture" id=5]
+[ext_resource path="res://Images/UI/background_Menu.png" type="Texture" id=6]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Fade_Out"
@@ -35,23 +37,30 @@ margin_left = -1.0
 margin_right = 1.0
 margin_bottom = 1.0
 
+[node name="TextureRect2" type="TextureRect" parent="MainMenu"]
+margin_left = -1.0
+margin_right = 1279.0
+margin_bottom = 723.0
+texture = ExtResource( 6 )
+
 [node name="SideMenu" type="VBoxContainer" parent="MainMenu"]
 anchor_left = 0.085
-anchor_top = 0.133
+anchor_top = 0.643
 anchor_right = 0.892
 anchor_bottom = 0.862
 margin_left = 0.199997
-margin_top = 0.239998
+margin_top = 0.0400085
 margin_right = 0.23999
 margin_bottom = 0.359985
 
 [node name="NewGameButton" type="ToolButton" parent="MainMenu/SideMenu"]
 margin_right = 1033.0
-margin_bottom = 72.0
+margin_bottom = 81.0
 text = "New Game"
-icon = ExtResource( 3 )
+icon = ExtResource( 5 )
 
 [node name="ContinueButton" type="ToolButton" parent="MainMenu/SideMenu"]
+visible = false
 margin_top = 76.0
 margin_right = 1033.0
 margin_bottom = 148.0
@@ -59,23 +68,37 @@ text = "Load Game"
 icon = ExtResource( 3 )
 
 [node name="OptionsButton" type="ToolButton" parent="MainMenu/SideMenu"]
-margin_top = 152.0
+visible = false
+margin_top = 76.0
 margin_right = 1033.0
-margin_bottom = 224.0
+margin_bottom = 148.0
 text = "Options"
 icon = ExtResource( 3 )
 
 [node name="QuitButton" type="ToolButton" parent="MainMenu/SideMenu"]
-margin_top = 228.0
+margin_top = 85.0
 margin_right = 1033.0
-margin_bottom = 300.0
+margin_bottom = 166.0
 text = "Exit"
-icon = ExtResource( 3 )
+icon = ExtResource( 5 )
 
 [node name="FadePanel" parent="MainMenu" instance=ExtResource( 2 )]
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="TextureRect" type="TextureRect" parent="MainMenu"]
+visible = false
+anchor_left = 0.082
+anchor_top = 0.082
+anchor_right = 0.934
+anchor_bottom = 0.599
+margin_left = 0.0399933
+margin_top = -0.0400009
+margin_right = 0.47998
+margin_bottom = -0.280029
+texture = ExtResource( 3 )
+expand = true
 
 [node name="MainMenu_Music_Player" parent="." instance=ExtResource( 4 )]
 

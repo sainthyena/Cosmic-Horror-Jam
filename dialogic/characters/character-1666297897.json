@@ -1,0 +1,21 @@
+{
+	"color": "#ff6ba5dd",
+	"description": "",
+	"display_name": "Emmy",
+	"display_name_bool": true,
+	"id": "character-1666297897.json",
+	"mirror_portraits": false,
+	"name": "Emmy",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Actors/NPC/Emmy/Images/Talksprite.png"
+		}
+	],
+	"scale": 100,
+	"theme": "theme-1665683063.cfg"
+}

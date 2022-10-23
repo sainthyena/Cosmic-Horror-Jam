@@ -74,6 +74,6 @@ icon = ExtResource( 1 )
 [connection signal="toggled" from="CanvasLayer/Zoom1Button" to="." method="_on_Zoom1Button_toggled"]
 [connection signal="pressed" from="CanvasLayer/ZoomHalfButton" to="CanvasLayer/CurrentZoom" method="_on_ZoomHalfButton_pressed"]
 [connection signal="toggled" from="CanvasLayer/ZoomHalfButton" to="." method="_on_ZoomHalfButton_toggled"]
-[connection signal="toggled" from="CanvasLayer/FullscreenButton" to="CanvasLayer/FullscreenToggle" method="_on_FullscreenButton_toggled"]
 [connection signal="toggled" from="CanvasLayer/FullscreenButton" to="." method="_on_FullscreenButton_toggled"]
+[connection signal="toggled" from="CanvasLayer/FullscreenButton" to="CanvasLayer/FullscreenToggle" method="_on_FullscreenButton_toggled"]
 [connection signal="pressed" from="CanvasLayer/ReturnButton" to="." method="_on_ReturnButton_pressed"]

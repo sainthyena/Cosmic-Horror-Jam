@@ -45,7 +45,7 @@
 			"animation_wait": false,
 			"change_mirror_portrait": false,
 			"change_z_index": false,
-			"character": "character-1665682986.json",
+			"character": "character-1666297897.json",
 			"event_id": "dialogic_002",
 			"mirror_portrait": false,
 			"portrait": "Default",
@@ -61,13 +61,13 @@
 			"z_index": 0
 		},
 		{
-			"character": "character-1665682986.json",
+			"character": "character-1666297897.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "this is also part of it"
 		},
 		{
-			"character": "character-1665682986.json",
+			"character": "character-1666297897.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
 			"text": "this is part of the dialog this is part of the dialog this is part of the dialog this is part of the dialog this is part of the dialog "

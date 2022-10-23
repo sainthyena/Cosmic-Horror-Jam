@@ -1,0 +1,21 @@
+{
+	"color": "#ff359539",
+	"description": "",
+	"display_name": "Henry",
+	"display_name_bool": true,
+	"id": "character-1666481853.json",
+	"mirror_portraits": false,
+	"name": "Henry",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 0,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://Actors/NPC/Henry/Talksprite.png"
+		}
+	],
+	"scale": 100,
+	"theme": "theme-1665683063.cfg"
+}
