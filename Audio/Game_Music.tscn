@@ -6,5 +6,6 @@
 [node name="Game_Music" type="AudioStreamPlayer"]
 pause_mode = 2
 stream = ExtResource( 1 )
+volume_db = -20.0
 pitch_scale = 0.8
 script = ExtResource( 2 )

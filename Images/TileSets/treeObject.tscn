@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Images/TileSets/tree_big2.png" type="Texture" id=1]
+[ext_resource path="res://Images/TileSets/tree_big.png" type="Texture" id=2]
+[ext_resource path="res://Images/TileSets/tree_big3.png" type="Texture" id=3]
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 384, 576 )
+
+[sub_resource type="SpriteFrames" id=24]
+animations = [ {
+"frames": [ SubResource( 23 ), ExtResource( 3 ), ExtResource( 2 ) ],
+"loop": false,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=21]
+radius = 71.0
+height = 140.0
+
+[sub_resource type="CapsuleShape2D" id=22]
+radius = 52.0
+height = 100.0
+
+[node name="treeObject" type="StaticBody2D"]
+z_index = 2
+
+[node name="sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 24 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 11, 88 )
+shape = SubResource( 21 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( 5, 174 )
+rotation = 1.5708
+shape = SubResource( 22 )

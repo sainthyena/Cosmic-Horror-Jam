@@ -1,0 +1,128 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Images/Sprites/Leaf Pile/5.png" type="Texture" id=1]
+[ext_resource path="res://Images/Sprites/Leaf Pile/8.png" type="Texture" id=2]
+[ext_resource path="res://Images/Sprites/Leaf Pile/6.png" type="Texture" id=3]
+[ext_resource path="res://Images/Sprites/Leaf Pile/2.png" type="Texture" id=4]
+[ext_resource path="res://Images/Sprites/Leaf Pile/3.png" type="Texture" id=5]
+[ext_resource path="res://Images/Sprites/Leaf Pile/4.png" type="Texture" id=6]
+[ext_resource path="res://Images/Sprites/Leaf Pile/9.png" type="Texture" id=7]
+[ext_resource path="res://Images/Sprites/Leaf Pile/7.png" type="Texture" id=8]
+[ext_resource path="res://Images/Sprites/Leaf Pile/1.png" type="Texture" id=9]
+
+[sub_resource type="ParticlesMaterial" id=1]
+flag_disable_z = true
+direction = Vector3( 0, 1, 0 )
+gravity = Vector3( -100, 50, 0 )
+initial_velocity = 274.51
+initial_velocity_random = 0.26
+angular_velocity = 400.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+hue_variation = 1.0
+hue_variation_random = 0.01
+
+[sub_resource type="AnimatedTexture" id=2]
+frames = 2
+frame_0/texture = ExtResource( 1 )
+frame_1/texture = ExtResource( 6 )
+frame_1/delay_sec = 0.0
+
+[sub_resource type="AnimatedTexture" id=3]
+frames = 2
+frame_0/texture = ExtResource( 2 )
+frame_1/texture = ExtResource( 4 )
+frame_1/delay_sec = 0.0
+
+[sub_resource type="AnimatedTexture" id=4]
+frames = 2
+frame_0/texture = ExtResource( 5 )
+frame_1/texture = ExtResource( 9 )
+frame_1/delay_sec = 0.0
+
+[node name="Falling_Leaves" type="Node2D"]
+
+[node name="Particles2D" type="Particles2D" parent="."]
+self_modulate = Color( 0.337255, 0.317647, 0.317647, 1 )
+position = Vector2( 587, 52 )
+z_index = 5
+amount = 36
+lifetime = 12.0
+one_shot = true
+preprocess = 40.0
+speed_scale = 0.4
+explosiveness = 0.12
+randomness = 1.0
+process_material = SubResource( 1 )
+texture = SubResource( 2 )
+
+[node name="Particles2D6" type="Particles2D" parent="."]
+self_modulate = Color( 0.337255, 0.317647, 0.317647, 1 )
+position = Vector2( 1118, 19 )
+z_index = 5
+amount = 36
+lifetime = 12.0
+one_shot = true
+preprocess = 40.0
+speed_scale = 0.4
+explosiveness = 0.12
+randomness = 1.0
+process_material = SubResource( 1 )
+texture = ExtResource( 7 )
+
+[node name="Particles2D4" type="Particles2D" parent="."]
+self_modulate = Color( 0.337255, 0.317647, 0.317647, 1 )
+position = Vector2( 825, 77 )
+z_index = 5
+amount = 36
+lifetime = 12.0
+one_shot = true
+preprocess = 40.0
+speed_scale = 0.4
+explosiveness = 0.12
+randomness = 1.0
+process_material = SubResource( 1 )
+texture = SubResource( 3 )
+
+[node name="Particles2D3" type="Particles2D" parent="."]
+self_modulate = Color( 0.337255, 0.317647, 0.317647, 1 )
+position = Vector2( 96, 72 )
+z_index = 5
+amount = 36
+lifetime = 12.0
+one_shot = true
+preprocess = 40.0
+speed_scale = 0.4
+explosiveness = 0.12
+randomness = 1.0
+process_material = SubResource( 1 )
+texture = ExtResource( 8 )
+
+[node name="Particles2D5" type="Particles2D" parent="."]
+self_modulate = Color( 0.337255, 0.317647, 0.317647, 1 )
+position = Vector2( 1017, 53 )
+z_index = 5
+amount = 36
+lifetime = 12.0
+one_shot = true
+preprocess = 40.0
+speed_scale = 0.4
+explosiveness = 0.12
+randomness = 1.0
+process_material = SubResource( 1 )
+texture = ExtResource( 3 )
+
+[node name="Particles2D2" type="Particles2D" parent="."]
+self_modulate = Color( 0.337255, 0.317647, 0.317647, 1 )
+position = Vector2( 380, 61 )
+z_index = 5
+amount = 36
+lifetime = 12.0
+one_shot = true
+preprocess = 40.0
+speed_scale = 0.4
+explosiveness = 0.12
+randomness = 1.0
+process_material = SubResource( 1 )
+texture = SubResource( 4 )

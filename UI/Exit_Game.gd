@@ -13,7 +13,6 @@ func _physics_process(delta):
 	if Input.is_action_just_released("ui_cancel"):
 		animationplayer.play("TextClose")
 		timer.stop()
-		print("timer stopped")
 
 func _on_Timer_timeout():
 	get_tree().quit()

@@ -1,0 +1,45 @@
+{
+	"events": [
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm telling you, I saw something."
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "There was something in the quarry."
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "We have to call the police."
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I don't care if they take 3 days to get here."
+		},
+		{
+			"character": "character-1666297897.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hold on, hold on, what did you see?"
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It was..."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1666671689.json",
+		"name": "After_Quarry_Talk"
+	}
+}

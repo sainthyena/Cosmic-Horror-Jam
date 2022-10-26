@@ -21,16 +21,42 @@
 			"z_index": 0
 		},
 		{
-			"character": "character-1666481843.json",
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1665682889.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "You better go talk to Henry. Your mom'll be with him."
+			"text": "Thanks for the ride."
 		},
 		{
 			"character": "character-1666481843.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "He's usually at the church. Right on ahead, can't miss it."
+			"text": "Least I could do."
+		},
+		{
+			"character": "character-1666481843.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "She'll be at the church."
 		},
 		{
 			"event_id": "dialogic_022",

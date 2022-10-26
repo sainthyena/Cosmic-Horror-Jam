@@ -1,0 +1,25 @@
+extends Area2D
+
+var  has_not_talked_MAD = true
+var area_active = null
+
+func _input(event):
+	if area_active and Player and has_not_talked_MAD and Input.is_action_just_pressed("ui_dialog_trigger"):
+			has_not_talked_MAD = false
+			if not get_tree().paused:
+				get_tree().paused = true
+				var dialog = Dialogic.start("Madison")
+				dialog.pause_mode = Node.PAUSE_MODE_PROCESS
+				add_child(dialog)
+				dialog.connect("timeline_end", self, "unpause")
+
+func unpause(_unused_argument):
+	get_tree().paused = false
+
+
+func _on_talk_space_area_entered(area):
+	area_active = true
+
+
+func _on_talk_space_area_exited(area):
+	area_active = false

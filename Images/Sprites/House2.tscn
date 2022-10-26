@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Actors/Closed_Dialog.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Images/Sprites/house_h2.png" type="Texture" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Node2D" type="StaticBody2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -343, -248, -326, 223, -89, 221, -87, 277, -75, 273, -74, 221, 234, 220, 234, 273, 247, 273, 248, 223, 313, 223, 336, -253 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Closed_Dialog" parent="." instance=ExtResource( 1 )]
+position = Vector2( 151, 92 )

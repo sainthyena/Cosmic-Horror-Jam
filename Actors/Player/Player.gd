@@ -15,8 +15,7 @@ onready var animationState = animationTree.get("parameters/playback")
 var velocity = Vector2()
 
 func _ready():
-	
-	GlobalSettings.connect("zoom_changed", self, "on_zoom_changed")
+	animationplayer.play("Idle_Front")
 	
 func showPauseMenu():
 	pass

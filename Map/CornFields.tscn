@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Images/Background/corn_field_background.jpg" type="Texture" id=1]
+[ext_resource path="res://Images/Background/corn_dirt.png" type="Texture" id=1]
 [ext_resource path="res://Images/Background/corn.png" type="Texture" id=2]
 
 [node name="CornFields" type="ParallaxBackground"]
@@ -8,8 +8,7 @@ layer = 0
 
 [node name="Background" type="ParallaxLayer" parent="."]
 z_index = -99
-motion_scale = Vector2( 0.2, 0.2 )
-motion_mirroring = Vector2( 612, 408 )
+motion_mirroring = Vector2( 1280, 720 )
 
 [node name="TextureRect" type="TextureRect" parent="Background"]
 modulate = Color( 0.196078, 0.196078, 0.196078, 1 )
@@ -24,6 +23,7 @@ motion_scale = Vector2( 0.4, 0.4 )
 motion_mirroring = Vector2( 196, 589 )
 
 [node name="TextureRect" type="TextureRect" parent="Corn"]
+visible = false
 modulate = Color( 0.321569, 0.321569, 0.321569, 1 )
 margin_right = 1280.0
 margin_bottom = 720.0

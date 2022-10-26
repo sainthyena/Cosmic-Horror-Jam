@@ -1,0 +1,161 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1666481853.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1666481853.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ah. Jacob. Good to see you in good health."
+		},
+		{
+			"character": "character-1666481853.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Have you eaten? Emma must've finished dinner by now."
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Thank you, pastor, but I'm not hungry."
+		},
+		{
+			"character": "character-1666481853.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Shame, she's gotten pretty damn good at cooking."
+		},
+		{
+			"character": "character-1666481853.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Now..."
+		},
+		{
+			"character": "character-1666481853.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " I'm sorry for your loss. It's unfortunate you missed the cerimony."
+		},
+		{
+			"character": "character-1666481853.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "We didn't know if you were coming back."
+		},
+		{
+			"character": "character-1666481853.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Your mothers urn will be delivered to your home whenever Jim comes on down."
+		},
+		{
+			"character": "character-1666481853.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'd say, a couple of hours."
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'll be there. But... what am I supposed to do now?"
+		},
+		{
+			"character": "character-1666481853.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh, Jacob, you should know."
+		},
+		{
+			"character": "character-1666481853.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You were man enough to leave town."
+		},
+		{
+			"character": "character-1666481853.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Can't you figure out what to do with yourself for a couple of hours?"
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yes, sir."
+		},
+		{
+			"character": "character-1666481853.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Good."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "..."
+		},
+		{
+			"character": "character-1666481853.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Why dont you go visit the quarry. It's nice this time of year."
+		},
+		{
+			"character": "character-1666481853.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " Welcome home, son."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1666668761.json",
+		"name": "Henry"
+	}
+}

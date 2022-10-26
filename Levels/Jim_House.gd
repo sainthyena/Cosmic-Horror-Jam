@@ -4,8 +4,10 @@ extends Node2D
 var activePlayer: Player
 export var levelId: String
 onready var activeSaved = false
+onready var cornAnimation = $Grow_Corn/Corn/CornAnim
 
 func _ready():
+
 	GameMusic.play()
 	
 	if Player and !activeSaved:
@@ -15,5 +17,4 @@ func _ready():
 
 
 func _on_Corn_Trigger_area_entered(area):
-	if Player:
-		print ("area entered")
+	cornAnimation.play("close")

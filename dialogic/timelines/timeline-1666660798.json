@@ -1,0 +1,15 @@
+{
+	"events": [
+		{
+			"character": "character-1666822725.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It's closed."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1666660798.json",
+		"name": "DoorClosed"
+	}
+}

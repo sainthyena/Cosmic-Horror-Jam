@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Main_Menu.gd" type="Script" id=1]
 [ext_resource path="res://interfaces/menu/FadePanel.tscn" type="PackedScene" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://Scenes/MainMenu_Music_Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Images/UI/newgrame.png" type="Texture" id=5]
 [ext_resource path="res://Images/UI/background_Menu.png" type="Texture" id=6]
+[ext_resource path="res://Images/Background/cornboi.png" type="Texture" id=7]
+[ext_resource path="res://Images/UI/backwoods.png" type="Texture" id=8]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Fade_Out"
@@ -43,15 +45,29 @@ margin_right = 1279.0
 margin_bottom = 723.0
 texture = ExtResource( 6 )
 
+[node name="TextureRect3" type="TextureRect" parent="MainMenu"]
+modulate = Color( 1, 1, 1, 0.109804 )
+margin_left = 1127.0
+margin_top = 480.0
+margin_right = 1255.0
+margin_bottom = 736.0
+texture = ExtResource( 7 )
+
+[node name="Title" type="TextureRect" parent="MainMenu"]
+modulate = Color( 0.227451, 0.184314, 0.278431, 1 )
+margin_right = 1280.0
+margin_bottom = 720.0
+texture = ExtResource( 8 )
+
 [node name="SideMenu" type="VBoxContainer" parent="MainMenu"]
 anchor_left = 0.085
 anchor_top = 0.643
 anchor_right = 0.892
 anchor_bottom = 0.862
 margin_left = 0.199997
-margin_top = 0.0400085
+margin_top = -14.96
 margin_right = 0.23999
-margin_bottom = 0.359985
+margin_bottom = 93.36
 
 [node name="NewGameButton" type="ToolButton" parent="MainMenu/SideMenu"]
 margin_right = 1033.0
@@ -61,17 +77,17 @@ icon = ExtResource( 5 )
 
 [node name="ContinueButton" type="ToolButton" parent="MainMenu/SideMenu"]
 visible = false
-margin_top = 76.0
+margin_top = 85.0
 margin_right = 1033.0
-margin_bottom = 148.0
+margin_bottom = 166.0
 text = "Load Game"
-icon = ExtResource( 3 )
+icon = ExtResource( 5 )
 
 [node name="OptionsButton" type="ToolButton" parent="MainMenu/SideMenu"]
 visible = false
-margin_top = 76.0
+margin_top = 85.0
 margin_right = 1033.0
-margin_bottom = 148.0
+margin_bottom = 157.0
 text = "Options"
 icon = ExtResource( 3 )
 

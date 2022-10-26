@@ -21,10 +21,186 @@
 			"z_index": 0
 		},
 		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Hey, Emma."
+		},
+		{
 			"character": "character-1666297897.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Jaccob! What are you doing here?"
+			"text": "Jacob."
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Just thought I'd drop by and say hi."
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "God, how long has it be-"
+		},
+		{
+			"character": "character-1666297897.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Four years."
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Yeah..."
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "..."
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "It's nice seeing you again."
+		},
+		{
+			"character": "character-1666297897.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "..."
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I know I promised not to come back, but it's not... it's..."
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " You know."
+		},
+		{
+			"character": "character-1666297897.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "And then you're a week late."
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Look, I'm sorry, I know we talked about it before I left but-"
+		},
+		{
+			"character": "character-1666297897.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I don't care about the promise. You fucked it up again."
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Look, Emmy, I-"
+		},
+		{
+			"character": "character-1666297897.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "All you had to do was not fuck it up. "
+		},
+		{
+			"character": "character-1666297897.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You'd think you could at least get here when it counted."
+		},
+		{
+			"character": "character-1666297897.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "But I guess not."
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "..."
+		},
+		{
+			"character": "character-1666297897.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You haven't been eating. You look like a corpse."
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You know, you're starting to sound like your mo-"
+		},
+		{
+			"character": "character-1666297897.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Fuck you."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "..."
+		},
+		{
+			"character": "character-1666297897.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I never told on you. Not to a soul. Henry pieced it together, but your mom could never read anyone."
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " I... thanks."
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I'm sorry."
+		},
+		{
+			"character": "character-1666297897.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Just go."
 		},
 		{
 			"event_id": "dialogic_022",

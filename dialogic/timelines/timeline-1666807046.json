@@ -1,0 +1,199 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1666807037.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": true
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ms. Darcy?"
+		},
+		{
+			"character": "character-1666807037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Huh? Whu-"
+		},
+		{
+			"character": "character-1666807037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh!"
+		},
+		{
+			"character": "character-1666807037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ohoh! Look who it is... Little Jacob. How's  your mother?"
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "She passed."
+		},
+		{
+			"character": "character-1666807037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Oh. No, right. I knew that"
+		},
+		{
+			"character": "character-1666807037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Pass me a beer, would you? My head's spinning."
+		},
+		{
+			"character": "character-1666807037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "..."
+		},
+		{
+			"character": "character-1666807037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "That's better."
+		},
+		{
+			"character": "character-1666807037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "So you're in town huh, what dragged you back?"
+		},
+		{
+			"character": "character-1666807037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Not your mother, I hope."
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " I wanted to see her before she... went."
+		},
+		{
+			"character": "character-1666807037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Don't lie to me, I know how she treated you."
+		},
+		{
+			"character": "character-1666807037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Why are you really here?"
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I... I don't know."
+		},
+		{
+			"character": "character-1666807037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You don't know?"
+		},
+		{
+			"character": "character-1666807037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You finally get away and then you come back? For what?"
+		},
+		{
+			"character": "character-1666807037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I was so proud of you for leaving."
+		},
+		{
+			"character": "character-1666807037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "As your teacher, let me give your some advice."
+		},
+		{
+			"character": "character-1666807037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Go back. Settle down. Anywhere you can find, any place that isn't here."
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "..."
+		},
+		{
+			"character": "character-1666807037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Just... Promise me you'll leave as soon as you can?"
+		},
+		{
+			"character": "character-1665682889.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I will. Promise."
+		},
+		{
+			"character": "character-1666807037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Alright..."
+		},
+		{
+			"character": "character-1666807037.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "We don't all have to stay here, Jacob."
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1666807046.json",
+		"name": "Madison"
+	}
+}

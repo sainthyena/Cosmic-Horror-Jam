@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Levels/Jim.gd" type="Script" id=1]
+[ext_resource path="res://Images/Sprites/truck_prop_truck.png" type="Texture" id=3]
+[ext_resource path="res://Images/Lighting/small light.png" type="Texture" id=4]
+[ext_resource path="res://Actors/NPC/Jim/Jim_smoke.png" type="Texture" id=5]
+[ext_resource path="res://Dialog/DialogPlayer.tscn" type="PackedScene" id=6]
+
+[sub_resource type="OccluderPolygon2D" id=11]
+polygon = PoolVector2Array( -42, -81, -25, -99, 23, -99, 37, -88, 38, -79, 42, -53, 49, -49, 60, -62, 72, -61, 78, -57, 82, -45, 86, -39, 80, -32, 67, -34, 70, -28, 73, -17, 81, -22, 88, -28, 95, -27, 95, -20, 91, -13, 81, -13, 75, -4, 78, 8, 74, 7, 80, 24, 75, 45, 84, 52, 82, 57, 77, 57, 82, 63, 82, 67, 76, 68, 68, 64, 65, 68, 54, 70, 30, -32, -34, -30, -44, -46 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 81, 151 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 5 )
+region = Rect2( 81, 0, 81, 151 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 5 )
+region = Rect2( 162, 0, 81, 151 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 5 )
+region = Rect2( 243, 0, 81, 151 )
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 6.0
+} ]
+
+[sub_resource type="CircleShape2D" id=12]
+radius = 74.5453
+
+[node name="Jim" type="StaticBody2D"]
+position = Vector2( 1667, 75 )
+z_index = 3
+script = ExtResource( 1 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2( -78, 6 )
+occluder = SubResource( 11 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( -78, 6 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 10 )
+frame = 2
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -78, 17.0877 )
+scale = Vector2( 1, 0.919304 )
+polygon = PoolVector2Array( -47, -57, -46, -95.82, -33, -83.8544, 38, -81.6789, 47, -95.82, 47, -55, 54, -28.3777, 74, -10.9732, 79, 14.0457, 77, 32, 84, 45.5914, 81, 57.557, 78, 62.9959, 54, 60.8202, 53, 78.2247, 44, 94.5414, -49, 93.4536, -55, 67.3469, -48, -15.3243 )
+
+[node name="Light2D" type="Light2D" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -20 )
+color = Color( 1, 0.658824, 0.176471, 1 )
+energy = 0.5
+
+[node name="Talk_Space" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Talk_Space"]
+position = Vector2( -16, 5 )
+shape = SubResource( 12 )
+
+[node name="DialogPlayer" parent="." instance=ExtResource( 6 )]
+timeline = "timeline-1666482307.json"
+
+[connection signal="area_entered" from="Talk_Space" to="." method="_on_Talk_Space_area_entered"]
+[connection signal="area_exited" from="Talk_Space" to="." method="_on_Talk_Space_area_exited"]

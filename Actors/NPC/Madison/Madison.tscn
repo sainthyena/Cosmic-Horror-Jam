@@ -1,0 +1,94 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Actors/NPC/Madison/madison-Sheet.png" type="Texture" id=1]
+[ext_resource path="res://Actors/NPC/Madison/Madison.png" type="Texture" id=2]
+[ext_resource path="res://Madison.gd" type="Script" id=3]
+[ext_resource path="res://Actors/NPC/Madison/talk_space.gd" type="Script" id=4]
+[ext_resource path="res://Actors/NPC/Madison/cooler.png" type="Texture" id=5]
+
+[sub_resource type="CapsuleShape2D" id=8]
+radius = 18.0
+height = 70.0
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 54, 128 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 215, 186 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 215, 0, 215, 186 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 430, 0, 215, 186 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 645, 0, 215, 186 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ SubResource( 2 ) ],
+"loop": true,
+"name": "front",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 3 ), SubResource( 3 ), SubResource( 3 ), SubResource( 3 ), SubResource( 3 ), SubResource( 3 ), SubResource( 3 ), SubResource( 3 ), SubResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 6.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=9]
+radius = 29.0
+
+[sub_resource type="CircleShape2D" id=10]
+radius = 99.0454
+
+[sub_resource type="CapsuleShape2D" id=11]
+radius = 17.0
+height = 18.0
+
+[node name="Madison" type="StaticBody2D"]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 85, 68 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -50, 64 )
+rotation = 1.5708
+shape = SubResource( 8 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 7 )
+animation = "idle"
+frame = 3
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( 38, 55 )
+shape = SubResource( 9 )
+
+[node name="talk_space" type="Area2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="talk_space"]
+position = Vector2( -18, 38 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2( 85, 67 )
+rotation = 1.5708
+shape = SubResource( 11 )
+
+[connection signal="area_entered" from="talk_space" to="talk_space" method="_on_talk_space_area_entered"]
+[connection signal="area_exited" from="talk_space" to="talk_space" method="_on_talk_space_area_exited"]

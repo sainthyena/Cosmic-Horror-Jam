@@ -110,7 +110,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Cosmic Horror Jam"
+config/name="Backwoods"
 run/main_scene="res://Scenes/Main_Menu.tscn"
 boot_splash/show_image=false
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
@@ -118,15 +118,17 @@ config/icon="res://CosmicHorrorsSigilBlack.png"
 
 [autoload]
 
+QuarryVisited="*res://Singletons/Quarry_Visited.gd"
 SignalBus="*res://Singletons/SignalBus.gd"
 UserDataManager="*res://Managers/UserDataManager.gd"
 GameManager="*res://Managers/GameManager.gd"
 LevelManager="*res://Managers/LevelManager.gd"
-PausedEvent="*res://Singletons/PausedEvent.gd"
-ChangeZoom="*res://Singletons/Change_Zoom.gd"
-GlobalSettings="*res://Singletons/global_settings.gd"
+GlobalSettings="res://Singletons/global_settings.gd"
 GameMusic="*res://Audio/Game_Music.tscn"
 GlobalTimer="*res://Globals/Global_Timer.tscn"
+Spawnpoint="res://Singletons/Spawnpoint.gd"
+Conversation="*res://Singletons/conversation.gd"
+GlobalWind="*res://Audio/GlobalWind.tscn"
 
 [display]
 
@@ -145,6 +147,30 @@ enabled=PoolStringArray( "res://addons/AsepriteWizard/plugin.cfg", "res://addons
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[importer_defaults]
+
+texture={
+"compress/bptc_ldr": 0,
+"compress/hdr_mode": 0,
+"compress/lossy_quality": 0.7,
+"compress/mode": 0,
+"compress/normal_map": 0,
+"detect_3d": false,
+"flags/anisotropic": false,
+"flags/filter": false,
+"flags/mipmaps": false,
+"flags/repeat": 0,
+"flags/srgb": 2,
+"process/HDR_as_SRGB": false,
+"process/fix_alpha_border": true,
+"process/invert_color": false,
+"process/normal_map_invert_y": false,
+"process/premult_alpha": false,
+"size_limit": 0,
+"stream": false,
+"svg/scale": 1.0
+}
 
 [input]
 
@@ -200,6 +226,8 @@ dialogic_default_action={
 ui_dialog_trigger={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":90,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777221,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
 pause={

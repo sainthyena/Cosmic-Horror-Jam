@@ -11,7 +11,7 @@ func _ready():
 
 
 func unpause(_unused_argument):
-	print ("unpaused")
+
 	get_tree().paused = false
 	finished = true
 	
@@ -23,7 +23,7 @@ func on_display_dialog():
 		dialog.pause_mode = Node.PAUSE_MODE_PROCESS
 		add_child(dialog)
 		dialog.connect("timeline_end", self, "unpause")
-		print("displaying dialog...")
+
 			
 	else:
 			

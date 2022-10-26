@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Actors/NPC/Henry/pastor.png" type="Texture" id=2]
+[ext_resource path="res://Talk_Area.gd" type="Script" id=3]
+[ext_resource path="res://Actors/NPC/Henry/Henry.gd" type="Script" id=4]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 13.0
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 71.8679
+
+[node name="Henry" type="StaticBody2D"]
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 45 )
+shape = SubResource( 1 )
+
+[node name="Talk_Area" type="Area2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Talk_Area"]
+shape = SubResource( 2 )
+
+[connection signal="area_entered" from="Talk_Area" to="Talk_Area" method="_on_Talk_Area_area_entered"]
+[connection signal="area_exited" from="Talk_Area" to="Talk_Area" method="_on_Talk_Area_area_exited"]

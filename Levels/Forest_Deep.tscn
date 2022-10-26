@@ -1,3 +1,144 @@
-[gd_scene format=2]
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Actors/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Images/Sprites/Fence.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Images/Background/forest_deep.png" type="Texture" id=3]
+[ext_resource path="res://Levels/change_back.gd" type="Script" id=5]
+[ext_resource path="res://Images/Sprites/Leaf Pile/Falling_Leaves.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Images/Background/quarry entry.png" type="Texture" id=7]
+[ext_resource path="res://Images/TileSets/Tree.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Images/TileSets/pebbles.png" type="Texture" id=9]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 189.5, 10 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "pebbles.png 0"
+0/texture = ExtResource( 9 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="OccluderPolygon2D" id=3]
+polygon = PoolVector2Array( 1098, -1212, 1108, 2417, 1046, 2417, 1060, -1207 )
 
 [node name="Forest_Deep" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 0, 1280 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+margin_left = 16.0
+margin_top = -243.0
+margin_right = 2576.0
+margin_bottom = 1229.0
+texture = ExtResource( 3 )
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1251, -544 )
+
+[node name="AnimationTree" parent="Player" index="3"]
+parameters/playback = SubResource( 4 )
+parameters/Idle/blend_position = Vector2( -0.0044843, 1.09483 )
+
+[node name="AnimatedSprite" parent="Player" index="4"]
+animation = "Idle_Front"
+
+[node name="Falling_Leaves" parent="Player" instance=ExtResource( 6 )]
+position = Vector2( -644, -394 )
+
+[node name="Particles2D" parent="Player/Falling_Leaves" index="0"]
+one_shot = false
+
+[node name="Particles2D6" parent="Player/Falling_Leaves" index="1"]
+one_shot = false
+
+[node name="Particles2D4" parent="Player/Falling_Leaves" index="2"]
+one_shot = false
+
+[node name="Particles2D3" parent="Player/Falling_Leaves" index="3"]
+one_shot = false
+
+[node name="Particles2D5" parent="Player/Falling_Leaves" index="4"]
+one_shot = false
+
+[node name="Particles2D2" parent="Player/Falling_Leaves" index="5"]
+one_shot = false
+
+[node name="Fence" parent="." instance=ExtResource( 2 )]
+z_index = 1
+tile_data = PoolIntArray( -1245167, 8, 0, -1245163, 6, 0, -1179631, 8, 0, -1179627, 6, 0, -1114095, 8, 0, -1114091, 6, 0, -1048559, 8, 0, -1048555, 6, 0, -983023, 8, 0, -983019, 6, 0, -917487, 8, 0, -917483, 6, 0, -851951, 8, 0, -851947, 6, 0, -786415, 8, 0, -786411, 6, 0, -720879, 8, 0, -720875, 6, 0, -655343, 8, 0, -655339, 6, 0, -589807, 8, 0, -589803, 6, 0, -524271, 8, 0, -524267, 6, 0, -458735, 8, 0, -458731, 6, 0, -393199, 8, 0, -393195, 6, 0, -327663, 8, 0, -327659, 6, 0, -262127, 8, 0, -262123, 6, 0, -196591, 8, 0, -196587, 6, 0, -131055, 8, 0, -131051, 6, 0, -65519, 8, 0, -65515, 6, 0, 17, 8, 0, 21, 6, 0, 65553, 8, 0, 65557, 6, 0, 131089, 8, 0, 131093, 6, 0, 196625, 8, 0, 196629, 6, 0, 262161, 8, 0, 262165, 6, 0, 327697, 8, 0, 327701, 6, 0, 393233, 8, 0, 393237, 6, 0, 458769, 8, 0, 458773, 6, 0, 524305, 8, 0, 524309, 6, 0, 589841, 8, 0, 589845, 6, 0, 655377, 8, 0, 655381, 6, 0, 720913, 8, 0, 720917, 6, 0, 786449, 8, 0, 786453, 6, 0, 851985, 8, 0, 851989, 6, 0, 917521, 8, 0, 917525, 6, 0, 983057, 8, 0, 983061, 6, 0, 1048593, 8, 0, 1048597, 6, 0, 1114129, 8, 0, 1114133, 6, 0, 1179665, 8, 0, 1179669, 6, 0, 1245201, 8, 0, 1245205, 6, 0, 1310737, 8, 0, 1310741, 6, 0, 1376273, 8, 0, 1376277, 6, 0, 1441809, 8, 0, 1441813, 6, 0, 1507345, 8, 0, 1507349, 6, 0, 1572881, 8, 0, 1572885, 6, 0, 1638417, 8, 0, 1638421, 6, 0, 1703953, 8, 0, 1703957, 6, 0, 1769489, 8, 0, 1769493, 6, 0, 1835025, 8, 0, 1835029, 6, 0, 1900561, 8, 0, 1900565, 6, 0, 1966097, 8, 0, 1966101, 6, 0, 2031633, 8, 0, 2031637, 6, 0, 2097169, 8, 0, 2097173, 6, 0, 2162705, 8, 0, 2162709, 6, 0, 2228241, 8, 0, 2228245, 6, 0, 2293777, 8, 0, 2293781, 6, 0, 2359313, 8, 0, 2359317, 6, 0, 2424849, 11, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ChangeLevelTrigger2" type="Area2D" parent="."]
+position = Vector2( 1083, 1707 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeLevelTrigger2"]
+position = Vector2( 171.5, 0 )
+shape = SubResource( 1 )
+
+[node name="ChangeLevelTrigger3" type="Area2D" parent="."]
+position = Vector2( 1079, -934 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeLevelTrigger3"]
+position = Vector2( 171.5, 0 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1193, 1897 )
+texture = ExtResource( 7 )
+
+[node name="Tree" parent="." instance=ExtResource( 8 )]
+cell_size = Vector2( 128, 128 )
+tile_data = PoolIntArray( -786427, 1, 0, -786426, 3, 0, -786422, 3, 0, -786421, 1, 0, -786420, 3, 0, -720892, 1, 0, -720891, 2, 0, -720890, 1, 0, -720884, 2, 0, -720883, 3, 0, -655357, 2, 0, -655355, 1, 0, -655354, 3, 0, -655350, 1, 0, -655346, 1, 0, -589821, 1, 0, -589819, 1, 0, -589813, 2, 0, -589812, 3, 0, -524283, 2, 0, -524282, 1, 0, -524278, 1, 0, -524277, 1, 0, -524275, 2, 0, -458748, 3, 0, -458747, 2, 0, -458746, 3, 0, -458741, 2, 0, -458739, 3, 0, -458737, 3, 0, -393213, 1, 0, -393210, 1, 0, -393203, 1, 0, -327675, 2, 0, -327669, 1, 0, -262138, 1, 0, -262131, 2, 0, -196606, 1, 0, -196597, 3, 0, -196593, 1, 0, -131069, 2, 0, -131066, 3, 0, -131060, 1, 0, 5, 1, 0, 11, 2, 0, 65539, 2, 0, 65550, 1, 0, 196619, 1, 0, 262149, 1, 0, 262157, 3, 0 )
+
+[node name="pebble" type="TileMap" parent="."]
+tile_set = SubResource( 2 )
+format = 1
+tile_data = PoolIntArray( 327695, 0, 0, 983060, 0, 0, 1441807, 0, 0, 1507352, 0, 0, 1703949, 0, 0, 1703966, 0, 0, 1769482, 0, 0, 1900567, 0, 0, 1966094, 0, 0, 1966100, 0, 0 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2( 22, 0 )
+occluder = SubResource( 3 )
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+position = Vector2( 324, 21 )
+occluder = SubResource( 3 )
+
+[connection signal="area_entered" from="ChangeLevelTrigger2" to="ChangeLevelTrigger2" method="_on_ChangeLevelTrigger2_area_entered"]
+[connection signal="area_entered" from="ChangeLevelTrigger3" to="ChangeLevelTrigger2" method="_on_ChangeLevelTrigger3_area_entered"]
+[connection signal="area_entered" from="ChangeLevelTrigger3" to="ChangeLevelTrigger3" method="_on_ChangeLevelTrigger2_area_entered"]
+
+[editable path="Player"]
+[editable path="Player/Game_Music"]
+[editable path="Player/Falling_Leaves"]

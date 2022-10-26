@@ -1,5 +1,5 @@
 {
-	"color": "#ff359539",
+	"color": "#ffffffff",
 	"description": "",
 	"display_name": "Henry",
 	"display_name_bool": true,
@@ -17,5 +17,5 @@
 		}
 	],
 	"scale": 100,
-	"theme": "theme-1665683063.cfg"
+	"theme": "theme-1666482555.cfg"
 }
